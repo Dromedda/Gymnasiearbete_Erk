@@ -1,0 +1,13 @@
+{
+    "id": "118ef802-935b-469a-80bb-d986415b6e6e",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "118ef802-935b-469a-80bb-d986415b6e6e",
+    "children": [
+        
+    ],
+    "filterType": "GMTileSet",
+    "folderName": "tilesets",
+    "isDefaultView": false,
+    "localisedFolderName": "ResourceTree_Tilesets"
+}
