@@ -39,5 +39,4 @@
 	kb_a =			(keyboard_check_pressed(ord("J")) || 
 					(gamepad_button_check_pressed(gp_1, gp_shoulderrb))); 
 
-
 #endregion

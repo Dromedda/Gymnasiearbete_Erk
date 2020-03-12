@@ -37,13 +37,14 @@
 
 #region collisions 
 
-	//check collisions and then apply x_speed to x_coordinate
+	// check horizontal collisions and then apply x_speed to x_coordinate
 	if (!place_meeting(x + x_speed, y, obj_collider)) {
 		x += x_speed; 	
 	} else if (!place_meeting(x + sign(x_speed), y, obj_collider)) {
 		x += sign(x_speed); 	
 	} 
 	
+	// check vertical collisions and then apply y_speed to y_coordinate
 	if (!place_meeting(x, y + y_speed, obj_collider)) {
 		y += y_speed; 	
 	} else if (!place_meeting(x, y + sign(y_speed), obj_collider)) {
