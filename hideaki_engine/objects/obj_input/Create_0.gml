@@ -11,8 +11,6 @@
 	
 	kb_a = 0; 
 	kb_b = 0; 
-	kb_r = 0; 
-	kb_lt = 0; 
-	kb_rt = 0; 
-
+	kb_c = 0; 
+	
 #endregion
