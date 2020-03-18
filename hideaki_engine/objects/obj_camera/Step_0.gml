@@ -7,8 +7,8 @@
 
 #region camera pos 
 
-	x = obj_camera_pos_controller.y; 
-	y = obj_camera_pos_controller.x;
+	x = obj_camera_pos_controller.x; 
+	y = obj_camera_pos_controller.y;
 	
 #endregion
 
