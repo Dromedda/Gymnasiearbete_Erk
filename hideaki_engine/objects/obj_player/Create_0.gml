@@ -29,6 +29,10 @@
 	shooting_cooldown = 30; 
 	shooting_cooldown_org = shooting_cooldown;
 	
+	//Melee 
+	melee_offset = 32;
+	melee_dir = 0;
+	
 	//Animation
 	face_dir_x = 0; 
 	face_dir_y = 0; 

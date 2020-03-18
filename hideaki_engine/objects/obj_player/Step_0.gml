@@ -73,6 +73,20 @@ switch(state) {
 		
 		#endregion
 		
+		#region Melee
+		
+			//@Todo Player Needs Stamina to use Melee
+			if (key_c) {
+				if (!instance_exists(obj_player_melee)) {
+					instance_create_layer(x + (melee_offset * face_dir_x), y + (melee_offset * face_dir_y), "Player", obj_player_melee);	
+				} else {
+					instance_destroy(obj_player_melee);
+					instance_create_layer(x + (melee_offset * face_dir_x), y + (melee_offset * face_dir_y), "Player", obj_player_melee);
+				}
+			}
+		
+		#endregion
+		
 		#region Shooting 
 		
 			if (key_aim) {
