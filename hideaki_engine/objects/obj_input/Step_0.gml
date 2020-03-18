@@ -31,7 +31,7 @@
 					((gamepad_axis_value(gp_1, gp_axislh)) > 0)); 
 					
 	kb_a =			(keyboard_check_pressed(ord("L")) || 
-					(gamepad_button_check_pressed(gp_1, gp_face3))); 
+					(gamepad_button_check_pressed(gp_1, gp_face2))); 
 
 	kb_b =			(keyboard_check_pressed(ord("J")) || 
 					(gamepad_button_check_pressed(gp_1, gp_face3))); 

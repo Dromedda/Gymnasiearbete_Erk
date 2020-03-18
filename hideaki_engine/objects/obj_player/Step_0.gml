@@ -95,6 +95,14 @@ switch(state) {
 		
 		#endregion
 		
+		#region Reloading 
+		
+			if (key_a) {
+				reloading = true; 	
+			}
+		
+		#endregion
+		
 	break;  
 	
 	case "dashing": 
@@ -130,7 +138,7 @@ switch(state) {
 		y_speed = 0; 
 		
 		//Check Ammunition
-		if ((ammunition >= 1) && (key_c)) {
+		if ((ammunition >= 1) && (key_c) && (!reloading)) {
 			if ((face_dir_x != 0) || (face_dir_y != 0)) {
 				ammunition--; 
 				instance_create_layer(x, y, "Player", obj_player_bullet);
