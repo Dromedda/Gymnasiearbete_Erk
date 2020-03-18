@@ -2,8 +2,8 @@
 
 	camera = camera_create();
 
-	cam_w = 640; 
-	cam_h = 360;
+	cam_w = 1024; 
+	cam_h = 576;
 	
 	cx = x; 
 	cy = y;
