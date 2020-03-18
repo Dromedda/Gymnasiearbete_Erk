@@ -4,6 +4,8 @@
 	
 	x_speed = 0; 
 	y_speed = 0; 
+	
+	particle_delay = 1; 
 
 #endregion
 

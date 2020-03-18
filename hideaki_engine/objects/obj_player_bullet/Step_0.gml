@@ -15,6 +15,7 @@
 	} else if (!place_meeting(x + sign(x_speed), y, obj_collider)) {
 		x += sign(x_speed); 	
 	} else {
+		part_particles_create(global.ps, x, y, global.pt_shoot, 12);
 		instance_destroy(self); 	
 	}
 	
@@ -23,14 +24,22 @@
 	} else if (!place_meeting(x, y + sign(y_speed), obj_collider)) {
 		y += sign(y_speed); 	
 	} else {
+		part_particles_create(global.ps, x, y, global.pt_shoot, 12);
 		instance_destroy(self); 	
 	}
 	
 
 #endregion
 
-#region Particles 
+#region Particles
 
-	part_particles_create(global.ps, x, y, global.pt_shoot, 12);
-
+	if (particle_delay != noone) {
+		if (!particle_delay <= 0) {
+			particle_delay--; 
+		} else {
+			part_particles_create(global.ps, x, y, global.pt_shoot, 12);	
+			particle_delay = noone; 
+		}
+	}
+	
 #endregion
