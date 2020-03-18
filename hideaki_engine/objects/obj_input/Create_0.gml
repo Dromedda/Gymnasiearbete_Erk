@@ -13,4 +13,6 @@
 	kb_b = 0; 
 	kb_c = 0; 
 	
+	kb_aim = 0; 
+	
 #endregion

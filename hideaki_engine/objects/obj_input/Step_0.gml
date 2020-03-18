@@ -38,6 +38,9 @@
 					
 	kb_c =			(keyboard_check_pressed(ord("J")) || 
 					(gamepad_button_check_pressed(gp_1, gp_shoulderrb))); 
+					
+	kb_aim =		(keyboard_check(vk_lshift)) || 
+					(gamepad_button_check(gp_1, gp_shoulderl)); 
 
 
 #endregion

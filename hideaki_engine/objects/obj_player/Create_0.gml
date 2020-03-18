@@ -20,8 +20,14 @@
 	
 	//shooting
 	ammunition = 8; 
-	reload_time = 30; 
-	reload_time_org = reload_time; 
+	ammunition_max = ammunition;
+	reloading = false; 
+	reload_time = 120; 
+	reload_time_org = reload_time;
+	
+	//@Todo Might want to imploment later
+	shooting_cooldown = 30; 
+	shooting_cooldown_org = shooting_cooldown;
 	
 	//Animation
 	face_dir_x = 0; 

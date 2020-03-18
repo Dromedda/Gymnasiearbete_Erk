@@ -7,7 +7,9 @@
 	
 	var key_a = obj_input.kb_a; 
 	var key_b = obj_input.kb_b; 
-	var key_c = obj_input.kb_c; 
+	var key_c = obj_input.kb_c;
+	
+	var key_aim = obj_input.kb_aim; 
 	
 #endregion
 
@@ -73,7 +75,9 @@ switch(state) {
 		
 		#region Shooting 
 		
-			
+			if (key_aim) {
+				state = "shooting"; 	
+			}
 		
 		#endregion
 		
@@ -102,7 +106,48 @@ switch(state) {
 	
 	break; 
 	
+	case "shooting": 
+	
+		face_dir_x = key_right - key_left;
+		face_dir_y = key_down - key_up;
+	
+		//Make player Stationary
+		x_speed = 0; 
+		y_speed = 0; 
+		
+		//Check Ammunition
+		if ((ammunition >= 1) && (key_c)) {
+			if ((face_dir_x != 0) || (face_dir_y != 0)) {
+				ammunition--; 
+				instance_create_layer(x, y, "Player", obj_player_bullet);
+			}
+		} else if (ammunition < 1) {
+			reloading = true; 
+		}
+		
+		// if Aim button is let go return to "Normal"
+		if (!key_aim) {
+			state = "normal"; 	
+		}
+		
+	break; 
+	
 }
+
+#region Reloading Gun
+
+	if (reloading) {
+		reload_time--; 
+			
+		if (reload_time <= 0) {
+			reloading = false; 
+			reload_time = reload_time_org; 
+			ammunition = ammunition_max;
+		}	
+	}
+
+#endregion
+
 
 #region collisions 
 
