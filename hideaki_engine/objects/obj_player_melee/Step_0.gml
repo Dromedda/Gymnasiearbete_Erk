@@ -1,11 +1,4 @@
-//Check if other melee exists
-
-/*
-x = obj_player.x + (melee_offset * dir_x);
-y = obj_player.y + (melee_offset * dir_y);
-*/
-
-#region Location
+#region Follow Player
 
 	if ((dir_x != 0) && (dir_y != 0)) {
 		y = obj_player.y + (melee_offset * dir_y);

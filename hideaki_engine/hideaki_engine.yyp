@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "24f8a6e6-696d-4c4b-b8a4-0810df7c4451",
+            "Value": {
+                "id": "f3dd8c6a-cd1d-4524-8d19-ca5f7c71ad48",
+                "resourcePath": "objects\\obj_camera_pos_controller\\obj_camera_pos_controller.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2d5e8bb1-1c7c-4ec7-8be8-2a0398be0aa1",
             "Value": {
                 "id": "7e586caf-884f-4b33-a0a9-43298e83f005",
@@ -195,6 +203,14 @@
             "Value": {
                 "id": "2a5d36ee-e314-49e2-b958-fce05a3ad1c2",
                 "resourcePath": "objects\\obj_input\\obj_input.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9531cb0b-c3b7-4c4b-9fc0-cb727a118a79",
+            "Value": {
+                "id": "dc49f7d3-1c6c-42c5-8079-c031c239073e",
+                "resourcePath": "objects\\obj_camera\\obj_camera.yy",
                 "resourceType": "GMObject"
             }
         },
