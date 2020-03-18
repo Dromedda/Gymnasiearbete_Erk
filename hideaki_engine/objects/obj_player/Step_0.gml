@@ -57,7 +57,7 @@ switch(state) {
 		
 		#region Dashing
 		
-			if ((key_b) && (dashing_cooldown == 0)) {
+			if ((key_b) && (dashing_cooldown == 0) && ((x_speed != 0) || (y_speed != 0))) {
 				part_particles_create(global.ps, x, y, global.pt_player_dash, 16);
 				state = "dashing"; 	
 			}
