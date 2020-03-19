@@ -11,5 +11,11 @@
 	
 	flicker_freq = 2; 
 	flicker_timer = flicker_freq;
+	
+	attack_delay = 30; 
+	attack_delay_org = attack_delay; 
+	attack_detect_radius = 96; 
+	attacking = true; 
+	attack_distance = 96; 
 
 #endregion
