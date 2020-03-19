@@ -39,6 +39,8 @@
 			attacking = true; 	
 		}
 		
+	} else {
+		attack_delay = attack_delay_org;	
 	}
 
 #endregion

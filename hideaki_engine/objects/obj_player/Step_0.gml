@@ -106,6 +106,12 @@ switch(state) {
 	break;  
 	
 	case "dashing": 
+	
+		#region Invincible
+	
+			invincible = true; 
+
+		#endregion
 		
 		#region Duration
 		
@@ -114,6 +120,7 @@ switch(state) {
 				dashing_duration--; 
 			} else { 
 				part_particles_create(global.ps, x, y, global.pt_player_dash, 32);
+				invincible = false; 
 				state = "normal"; 
 			} 
 		
@@ -187,3 +194,38 @@ switch(state) {
 	}
 	
 #endregion	
+
+#region Fucking Die
+
+	/*
+	if (!hit_by_enemy) {
+		if (place_meeting(x, y, obj_enemy_damage_collider)) {
+			var enemy_collider = instance_nearest(x, y, obj_enemy_damage_collider);
+		
+			hp -= enemy_collider.dmg;
+		
+			hit_by_enemy = true; 
+		
+		}
+	}
+	*/
+	
+	if (hit_by_enemy) {
+		hit_by_enemy_timer--; 
+		
+		if (hit_by_enemy_timer <= 0) {
+			hit_by_enemy = false; 
+			hit_by_enemy_timer = hit_by_enemy_timer_org;
+		}
+	} else {
+		if (place_meeting(x, y, obj_enemy_damage_collider)) {
+			var enemy_collider = instance_nearest(x, y, obj_enemy_damage_collider);
+		
+			hp -= enemy_collider.dmg;
+		
+			hit_by_enemy = true; 
+		
+		}
+	}
+
+#endregion

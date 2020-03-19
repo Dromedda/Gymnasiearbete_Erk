@@ -1,5 +1,8 @@
 #region Variables
 
+	//Stats
+	dmg = 2;
+
 	timer = 30;
 
 #endregion

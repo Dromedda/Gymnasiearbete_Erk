@@ -1,5 +1,13 @@
 #region Variables
 
+	//Stats States
+	invincible = false; 
+	hit_by_enemy = false; 
+	hit_by_enemy_timer = 15; 
+	hit_by_enemy_timer_org = hit_by_enemy_timer; 
+	
+	hp = 6; 
+
 	//Movement
 	move_speed = 3; 
 	move_speed_org = move_speed;
@@ -36,5 +44,8 @@
 	//Animation
 	face_dir_x = 0; 
 	face_dir_y = 0; 
+	
+	flicker_freq = 8; 
+	flicker_timer = flicker_freq;
 	
 #endregion

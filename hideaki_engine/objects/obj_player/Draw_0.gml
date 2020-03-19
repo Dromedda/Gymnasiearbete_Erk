@@ -6,8 +6,16 @@
 	
 #endregion
 
-#region Draw Self
+#region Flicker when hit
 
-	draw_self();
-
+	if (!hit_by_enemy) {
+		draw_self();
+	} else {
+		flicker_timer--; 
+		if (flicker_timer <= 0) {
+			draw_self();	
+			flicker_timer = flicker_freq; 
+		} 
+	}
+	
 #endregion
