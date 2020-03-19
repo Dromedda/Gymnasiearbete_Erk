@@ -9,7 +9,7 @@
 	hp = 6; 
 
 	//Movement
-	move_speed = 3; 
+	move_speed = 6; 
 	move_speed_org = move_speed;
 	move_speed_diag = move_speed * 0.707; 
 	
@@ -27,10 +27,10 @@
 	dashing_cooldown_org = dashing_cooldown; 
 	
 	//shooting
-	ammunition = 8; 
+	ammunition = 2; 
 	ammunition_max = ammunition;
 	reloading = false; 
-	reload_time = 120; 
+	reload_time = 90; 
 	reload_time_org = reload_time;
 	
 	//@Todo Might want to imploment later

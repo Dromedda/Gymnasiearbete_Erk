@@ -227,5 +227,9 @@ switch(state) {
 		
 		}
 	}
+	
+	if (hp <= 0) {
+		room_restart(); //@todo Change Later so that you instead goto a death screen and then back to main menu.	
+	}
 
 #endregion

@@ -1,6 +1,5 @@
 #region Take Damage
 
-	if (!invincible) {
 		//Player Melee
 		if (place_meeting(x, y, obj_player_melee)) {
 			hp -= player_melee_dmg; 
@@ -15,7 +14,6 @@
 			instance_destroy(obj_player_bullet);
 			invincible = true;
 		}
-	} 
 
 #endregion
 
@@ -62,6 +60,47 @@
 		attack_delay = attack_delay_org; 
 		attacking = false; 
 		
+	}
+
+#endregion
+
+#region Move Towards Player
+
+	if (!invincible) {
+			if (collision_circle(x, y, player_detection_radius, obj_player, false, true)) {
+				var px = obj_player.x; 
+				var py = obj_player.y; 
+		
+				var move_to = point_direction(x, y, px, py);
+		
+				x_speed = lengthdir_x(move_speed, move_to);
+				y_speed = lengthdir_y(move_speed, move_to);
+				
+				//check collisions and then apply x_speed to x_coordinate
+				if (!place_meeting(x + x_speed, y, obj_collider)) {
+					if (!place_meeting(x + x_speed, y, obj_enemy_parent)) {
+						x += x_speed; 	
+					}
+				} else if (!place_meeting(x + sign(x_speed), y, obj_collider)) {
+					if (!place_meeting(x + sign(x_speed), y, obj_enemy_parent)) {
+						x += sign(x_speed); 	
+					}
+				} 
+	
+				if (!place_meeting(x, y + y_speed, obj_collider)) {
+					if (!place_meeting(x, y + y_speed, obj_enemy_parent)) {
+						y += y_speed; 	
+					} 	
+				} else if (!place_meeting(x, y + sign(y_speed), obj_collider)) {
+					if (!place_meeting(x, y + sign(y_speed), obj_enemy_parent)) {
+						y += sign(y_speed); 	
+					}
+				}
+				
+				
+				
+		
+			}
 	}
 
 #endregion

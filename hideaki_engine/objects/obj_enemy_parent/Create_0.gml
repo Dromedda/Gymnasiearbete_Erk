@@ -12,6 +12,10 @@
 	flicker_freq = 2; 
 	flicker_timer = flicker_freq;
 	
+	player_detection_radius = 600; 	
+	
+	move_speed = 4;
+	
 	attack_delay = 60; 
 	attack_delay_org = attack_delay; 
 	attack_detect_radius = (sprite_get_height(spr_enemy_damage_collider) + 32); 
