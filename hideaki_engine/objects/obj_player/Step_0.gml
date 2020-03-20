@@ -145,18 +145,22 @@ switch(state) {
 		y_speed = 0; 	
 		
 		//Check Ammunition and cooldown
-		if (shooting_cooldown <= 0) {
-			if ((ammunition >= 1) && (key_c) && (!reloading)) {
-				if ((face_dir_x != 0) || (face_dir_y != 0)) {
-					ammunition--; 
-					shooting_cooldown = shooting_cooldown_org;
-					instance_create_layer(x, y, "Player", obj_player_bullet);
-				}
-			} else if (ammunition < 1) {
-				reloading = true; 
-			}
-		} else {
+		if (shooting_cooldown >= 1) {
 			shooting_cooldown--; 	
+		}
+		
+		if ((ammunition >= 1) && (key_c) && (!reloading)) {
+			if ((face_dir_x != 0) || (face_dir_y != 0)) {
+				if (shooting_cooldown <= 0) {
+					if (ammunition >= 2) {
+						shooting_cooldown = shooting_cooldown_org;
+					}
+					ammunition--; 
+					instance_create_layer(x, y, "Player", obj_player_bullet);
+				} 
+			}
+		} else if (ammunition < 1) {
+			reloading = true; 
 		}
 		
 		// if Aim button is let go return to "Normal"
