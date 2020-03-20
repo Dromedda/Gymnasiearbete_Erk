@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "323913cb-ec0f-4fb1-a194-dfb53fcbe164",
+            "Value": {
+                "id": "626de93c-69d8-4189-8d2d-cbd0382f00f9",
+                "resourcePath": "sprites\\spr_shooting_aim\\spr_shooting_aim.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3c556e8a-da8f-45aa-8217-eb20b83c7149",
             "Value": {
                 "id": "fa925a0b-98ba-45f6-80e0-391c4d5f039e",

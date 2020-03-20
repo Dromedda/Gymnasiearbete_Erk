@@ -34,9 +34,9 @@
 	reload_time_org = reload_time;
 	
 	//@Todo Might want to imploment later
-	shooting_cooldown = 30; 
+	shooting_cooldown = 8; 
 	shooting_cooldown_org = shooting_cooldown;
-	
+
 	//Melee 
 	melee_offset = 32;
 	melee_dir = 0;
