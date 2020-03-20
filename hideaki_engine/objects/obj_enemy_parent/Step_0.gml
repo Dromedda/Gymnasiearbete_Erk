@@ -77,43 +77,27 @@
 					x_speed = lengthdir_x(move_speed, move_to);
 					y_speed = lengthdir_y(move_speed, move_to);
 				}
-				
+
 				//check collisions and then apply x_speed to x_coordinate
 				if (!place_meeting(x + x_speed, y, obj_collider)) {
 					if (!place_meeting(x + x_speed, y, obj_enemy_parent)) {
-						var ec = instance_nearest(x, y, obj_enemy_parent);
-						if (!ec.invincible) {
-							x += x_speed; 	
-						}
+						x += x_speed;
 					}
 				} else if (!place_meeting(x + sign(x_speed), y, obj_collider)) {
 					if (!place_meeting(x + sign(x_speed), y, obj_enemy_parent)) {
-						var ec = instance_nearest(x, y, obj_enemy_parent);
-						if (!ec.invincible) {
-							x += sign(x_speed); 	
-						}	
+						x += sign(x_speed);	
 					}
 				} 
 	
 				if (!place_meeting(x, y + y_speed, obj_collider)) {
 					if (!place_meeting(x, y + y_speed, obj_enemy_parent)) {
-						var ec = instance_nearest(x, y, obj_enemy_parent);
-						if (!ec.invincible) {
-							y += y_speed; 	
-						}
+						y += y_speed; 
 					} 	
 				} else if (!place_meeting(x, y + sign(y_speed), obj_collider)) {
 					if (!place_meeting(x, y + sign(y_speed), obj_enemy_parent)) {
-						var ec = instance_nearest(x, y, obj_enemy_parent);
-						if (!ec.invincible) {
-							y += sign(y_speed); 	
-						}
+						y += sign(y_speed); 	
 					}
 				}
-				
-				
-				
-		
 			}
 	}
 
