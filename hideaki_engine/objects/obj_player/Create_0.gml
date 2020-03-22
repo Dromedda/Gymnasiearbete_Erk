@@ -34,7 +34,7 @@
 	reload_time_org = reload_time;
 	
 	//@Todo Might want to imploment later
-	shooting_cooldown = 60; 
+	shooting_cooldown = 16; 
 	shooting_cooldown_org = shooting_cooldown;
 
 	//Melee 

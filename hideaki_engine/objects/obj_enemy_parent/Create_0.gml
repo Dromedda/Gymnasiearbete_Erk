@@ -16,7 +16,7 @@
 	
 	move_speed = 4;
 	
-	attack_delay = 60; 
+	attack_delay = 40; 
 	attack_delay_org = attack_delay; 
 	attack_detect_radius = (sprite_get_height(spr_enemy_damage_collider) + 32); 
 	attacking = true; 
