@@ -11,9 +11,3 @@
 	}
 	
 #endregion
-
-#region Draw Attack Distance
-	
-	draw_circle(x, y, attack_detect_radius, true);
-
-#endregion

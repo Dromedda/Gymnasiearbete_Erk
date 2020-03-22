@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "225bc8db-4d6d-4d2d-b39f-ba288fea0cb5",
+            "Value": {
+                "id": "34e80478-3387-4b14-877d-27db31da4cd4",
+                "resourcePath": "sprites\\spr_enemy_bullet_damage_collider\\spr_enemy_bullet_damage_collider.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "227565ef-616d-4aca-b7d9-384d3821f642",
             "Value": {
                 "id": "71e0e860-9c6d-4c9c-a25c-7170422786c1",
@@ -156,6 +164,14 @@
                 "id": "43292334-38ab-41c9-82f0-057ee47fa618",
                 "resourcePath": "views\\3d74f327-6413-4fcc-bb47-a502d7ad08d7.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "439448f1-2f4b-47c7-9da5-8a901d5119f9",
+            "Value": {
+                "id": "2792ea1b-572a-48c9-aa64-a7258324c82e",
+                "resourcePath": "objects\\obj_enemy_shooter\\obj_enemy_shooter.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -235,6 +251,14 @@
             "Value": {
                 "id": "db5983e6-dc99-455f-93b0-707b796d2ade",
                 "resourcePath": "views\\6c6d1215-99d3-4101-8f84-0a311456747b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6d75b5d9-212e-447e-9ed9-5b49df57e49a",
+            "Value": {
+                "id": "7f717e1b-29e1-422d-913a-5dfd491c1c80",
+                "resourcePath": "views\\6d75b5d9-212e-447e-9ed9-5b49df57e49a.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -372,6 +396,14 @@
                 "id": "95d8363e-42ba-4e04-8eb9-2337ee9f7e5f",
                 "resourcePath": "views\\b3aa63f7-d048-4894-b544-a00f96d7d424.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b85321b8-0a0a-4481-8f62-9584a3314d62",
+            "Value": {
+                "id": "257c3217-883c-49b9-b84d-af1b79f6f410",
+                "resourcePath": "objects\\obj_enemy_bullet_damage_collider\\obj_enemy_bullet_damage_collider.yy",
+                "resourceType": "GMObject"
             }
         },
         {
