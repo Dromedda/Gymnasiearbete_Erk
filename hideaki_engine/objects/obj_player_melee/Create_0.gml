@@ -1,13 +1,9 @@
 #region Variables
 
 	melee_offset = (obj_player.melee_offset * 2); 
-	timer = 4;
+	timer = obj_player.melee_dur; 
 
-#endregion
-
-#region Get Direction
-
-	dir_x = obj_player.face_dir_x; 
-	dir_y = obj_player.face_dir_y; 
+	dir_x = 0; 
+	dir_y = 0; 
 
 #endregion

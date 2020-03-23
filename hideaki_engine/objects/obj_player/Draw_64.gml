@@ -21,6 +21,12 @@
 
 #endregion
 
+#region Draw Stamina
+
+	draw_text(400, 24, "Stamina = " + string(stamina));
+
+#endregion
+
 #region Draw Health
 
 	var heart_scale = 2; 

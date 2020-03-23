@@ -80,21 +80,21 @@
 				
 			//check collisions and then apply x_speed to x_coordinate
 			if (!place_meeting(x + x_speed, y, obj_collider)) {
-				if (!place_meeting(x + x_speed, y, obj_enemy_parent)) {
+				if (!place_meeting(x + x_speed, y, obj_enemy_melee)) {
 					x += x_speed;
 				}
 			} else if (!place_meeting(x + sign(x_speed), y, obj_collider)) {
-				if (!place_meeting(x + sign(x_speed), y, obj_enemy_parent)) {
+				if (!place_meeting(x + sign(x_speed), y, obj_enemy_melee)) {
 					x += sign(x_speed);	
 				}
 			} 
 	
 			if (!place_meeting(x, y + y_speed, obj_collider)) {
-				if (!place_meeting(x, y + y_speed, obj_enemy_parent)) {
+				if (!place_meeting(x, y + y_speed, obj_enemy_melee)) {
 					y += y_speed; 
-				} 	
+				}
 			} else if (!place_meeting(x, y + sign(y_speed), obj_collider)) {
-				if (!place_meeting(x, y + sign(y_speed), obj_enemy_parent)) {
+				if (!place_meeting(x, y + sign(y_speed), obj_enemy_melee)) {
 					y += sign(y_speed); 	
 				}
 			}

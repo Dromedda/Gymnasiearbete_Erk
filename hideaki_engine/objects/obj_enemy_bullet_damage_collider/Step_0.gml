@@ -19,6 +19,8 @@
 	
 	if (place_meeting(x, y, obj_collider)) {
 		instance_destroy(self);	
+	} else if (place_meeting(x, y, obj_player)) {
+		part_particles_create(global.ps, x, y, global.pt_shoot, 256);
 	}
 
 #endregion

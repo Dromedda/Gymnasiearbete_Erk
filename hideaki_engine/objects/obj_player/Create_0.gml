@@ -39,11 +39,23 @@
 
 	//Melee 
 	melee_offset = 32;
-	melee_dir = 0;
+	melee_dir_x = 0;
+	melee_dir_y = 0;
+	melee_dur = 8; 
+	melee_dur_org = melee_dur; 
+	melee_move_speed_mult = 2; 
+	
+	stamina = 6; 
+	stamina_org = stamina; 
+	stamina_regen = 48; 
+	stamina_regen_org = stamina_regen; 
 	
 	//Animation
 	face_dir_x = 0; 
 	face_dir_y = 0; 
+	
+	facing_dir_x = 0; 
+	facing_dir_y = 0; 
 	
 	flicker_freq = 8; 
 	flicker_timer = flicker_freq;

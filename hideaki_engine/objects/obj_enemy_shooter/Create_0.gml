@@ -3,7 +3,7 @@
 	player_melee_dmg = 2; 
 	player_shoot_dmg = 3; 
 	
-	hp = 6;
+	hp = 3;
 	
 	invincible = false; 
 	invincible_timer = 30;
@@ -14,7 +14,7 @@
 	
 	player_detection_radius = 400; 	
 	
-	move_speed = 2;
+	move_speed = 3;
 	
 	attack_delay = 70; 
 	attack_delay_org = attack_delay; 

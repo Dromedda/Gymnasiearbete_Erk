@@ -19,6 +19,18 @@
 
 #endregion
 
+#region Stamina
+
+	if ((state != "melee") && (stamina != stamina_org)) {	
+		stamina_regen--; 
+		if (stamina_regen <= 0) {
+			stamina += 1; 
+			stamina_regen = stamina_regen_org; 
+		}
+	}
+
+#endregion
+
 /*
 	State Machine For Player
 	STATES AVAILIBLE:
@@ -52,6 +64,18 @@ switch(state) {
 		
 			face_dir_x = sign(x_speed);
 			face_dir_y = sign(y_speed);
+			
+			if (x_speed > 0) {
+				facing_dir_x = 1; 	
+			} else if (x_speed < 0) {
+				facing_dir_x = -1; 	
+			}
+			
+			if (y_speed > 0) {
+				facing_dir_y = 1; 	
+			} else if (y_speed < 0) {
+				facing_dir_y = -1;	
+			}
 		
 		#endregion
 		
@@ -74,8 +98,9 @@ switch(state) {
 		#endregion
 		
 		#region Melee
-		
+			
 			//@Todo Player Needs Stamina to use Melee
+			/*
 			if (key_c) {
 				if (!instance_exists(obj_player_melee)) {
 					instance_create_layer(x + (melee_offset * face_dir_x), y + (melee_offset * face_dir_y), "Player", obj_player_melee);	
@@ -84,6 +109,21 @@ switch(state) {
 					instance_create_layer(x + (melee_offset * face_dir_x), y + (melee_offset * face_dir_y), "Player", obj_player_melee);
 				}
 			}
+			*/
+			
+			if ((key_c) && (stamina >= 1)) {
+				stamina--; 
+				
+				melee_dir_x = move_dir_x; 
+				melee_dir_y = move_dir_y;
+				
+				instance_create_layer(x + (melee_offset * facing_dir_x), y + (melee_offset * facing_dir_y), "Player", obj_player_melee);
+				state = "melee"; 	
+			}
+			
+			show_debug_message("Melee_dir_x = " + string(melee_dir_x));
+			show_debug_message("Melee_dir_y = " + string(melee_dir_y));
+			
 		
 		#endregion
 		
@@ -170,6 +210,23 @@ switch(state) {
 		
 	break; 
 	
+	case "melee": 
+	
+		if (melee_dur >= 1) {
+			x_speed = ((move_speed * melee_move_speed_mult) * melee_dir_x);	
+			y_speed = ((move_speed * melee_move_speed_mult) * melee_dir_y);	
+			melee_dur--; 
+		} else {
+			melee_dur = melee_dur_org; 
+			state = "normal"; 
+		}
+		
+		show_debug_message("MELEE"); 
+		show_debug_message(melee_dur)
+		
+	
+	break; 
+	
 }
 
 #region Reloading Gun
@@ -231,6 +288,8 @@ switch(state) {
 			var enemy_collider = instance_nearest(x, y, obj_enemy_damage_collider);
 		
 			hp -= enemy_collider.dmg;
+			
+			instance_destroy(enemy_collider);
 		
 			hit_by_enemy = true; 
 		
