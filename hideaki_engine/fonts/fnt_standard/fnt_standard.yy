@@ -4,7 +4,7 @@
     "mvc": "1.1",
     "name": "fnt_standard",
     "AntiAlias": 1,
-    "TTFName": "",
+    "TTFName": "${project_dir}\\fonts\\fnt_standard\\windows_command_prompt.ttf",
     "ascenderOffset": 0,
     "bold": false,
     "charset": 0,
@@ -1454,7 +1454,7 @@
         }
     ],
     "hinting": 0,
-    "includeTTF": false,
+    "includeTTF": true,
     "interpreter": 0,
     "italic": false,
     "kerningPairs": [

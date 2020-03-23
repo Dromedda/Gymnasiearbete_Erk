@@ -137,7 +137,7 @@ switch(state) {
 		
 		#region Reloading 
 		
-			if (key_a) {
+			if ((key_a) && (ammunition < ammunition_max)) {
 				reloading = true; 	
 			}
 		
@@ -319,12 +319,32 @@ switch(state) {
 		
 	#endregion
 	
+	#region Decide Animation
+	
+		if ((x_speed != 0) || (y_speed != 0)) {
+			anim_state = "run"; 	
+		} else if ((x_speed == 0) && (y_speed == 0)) {
+			anim_state = "idle"; 	
+		} else {
+			anim_state = "static"; 	
+		}
+	
+	#endregion
+	
 	#region State Machine
 	
 		switch(anim_state) {
 			case "static": 
 				sprite_index = spr_player_static;
-			break; 
+				break; 
+			
+			case "idle": 
+				sprite_index = spr_player_idle; 
+				break; 
+			
+			case "run": 
+				sprite_index = spr_player_run;
+				break; 
 			
 			default: 
 				sprite_index = spr_player_static; 
