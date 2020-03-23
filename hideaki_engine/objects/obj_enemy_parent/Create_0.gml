@@ -23,3 +23,15 @@
 	attack_distance = sprite_get_height(spr_enemy_damage_collider); 
 
 #endregion
+
+#region Spawn Failsafe
+
+	var rx = sprite_get_width(sprite_index); 
+	var ry = sprite_get_height(sprite_index); 
+
+	if (collision_rectangle(x - (rx/2), y - (ry/2), x + (rx/2), y + (ry/2), obj_enemy_parent, false, true)) {
+		x = irandom_range(60, (room_width - 60)); 
+		y = irandom_range(60, (room_height - 60));
+	}
+
+#endregion

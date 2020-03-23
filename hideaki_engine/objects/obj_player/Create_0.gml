@@ -41,9 +41,9 @@
 	melee_offset = 32;
 	melee_dir_x = 0;
 	melee_dir_y = 0;
-	melee_dur = 12; 
+	melee_dur = 8; 
 	melee_dur_org = melee_dur; 
-	melee_move_speed_mult = 2; 
+	melee_move_speed_mult = 3; 
 	
 	stamina = 6; 
 	stamina_org = stamina; 

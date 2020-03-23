@@ -3,7 +3,6 @@
 		//Player Melee
 		if (place_meeting(x, y, obj_player_melee)) {
 			hp -= player_melee_dmg; 
-			instance_destroy(obj_player_melee);
 			invincible = true; 
 		}
 	
