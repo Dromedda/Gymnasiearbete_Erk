@@ -41,7 +41,7 @@
 	melee_offset = 32;
 	melee_dir_x = 0;
 	melee_dir_y = 0;
-	melee_dur = 8; 
+	melee_dur = 12; 
 	melee_dur_org = melee_dur; 
 	melee_move_speed_mult = 2; 
 	
@@ -59,5 +59,7 @@
 	
 	flicker_freq = 8; 
 	flicker_timer = flicker_freq;
+	
+	anim_state = "static"; 
 	
 #endregion

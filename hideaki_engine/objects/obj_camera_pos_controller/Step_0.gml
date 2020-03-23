@@ -8,4 +8,26 @@
 	x += (p_x - x)/2; 
 	y += (p_y - y)/2; 
 
+	show_debug_message("camera_pos x = " + string(x));
+	show_debug_message("camera_pos y = " + string(y));
+
 #endregion
+
+/*
+Boundaries : 
+	top left
+	506
+	288
+
+	top right
+	1277	
+	288
+
+	bottom left
+	512
+	896
+
+	bottom right
+	1284
+	896
+*/

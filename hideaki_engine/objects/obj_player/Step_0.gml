@@ -179,6 +179,13 @@ switch(state) {
 	
 		face_dir_x = key_right - key_left;
 		face_dir_y = key_down - key_up;
+		
+		//Facing Dir
+		if (face_dir_x < 0) {
+			facing_dir_x = -1; 
+		} else if (face_dir_x > 0) {
+			facing_dir_x = 1; 	
+		}
 	
 		//Make player Stationary
 		x_speed = 0; 
@@ -299,5 +306,32 @@ switch(state) {
 	if (hp <= 0) {
 		room_restart(); //@todo Change Later so that you instead goto a death screen and then back to main menu.	
 	}
+
+#endregion
+
+#region Animation
+
+	#region Flip Sprite
+		
+		if (facing_dir_x != 0) {
+			image_xscale = facing_dir_x;
+		}
+		
+	#endregion
+	
+	#region State Machine
+	
+		switch(anim_state) {
+			case "static": 
+				sprite_index = spr_player_static;
+			break; 
+			
+			default: 
+				sprite_index = spr_player_static; 
+				break; 
+		}
+	
+	#endregion
+
 
 #endregion

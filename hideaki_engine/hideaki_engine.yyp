@@ -423,6 +423,14 @@
             }
         },
         {
+            "Key": "cce08055-d529-4eb3-acf2-a691df6026eb",
+            "Value": {
+                "id": "83fd2d23-89e6-42ef-8cbf-ac0c6c48a008",
+                "resourcePath": "sprites\\spr_camera_collider\\spr_camera_collider.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cd1309ca-07ab-441c-bb42-169e3b0909b1",
             "Value": {
                 "id": "ac33382d-f27e-4baf-935a-2d52b81027c5",
