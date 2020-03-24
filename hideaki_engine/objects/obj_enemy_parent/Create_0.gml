@@ -3,6 +3,9 @@
 	player_melee_dmg = 2; 
 	player_shoot_dmg = 3; 
 	
+	x_speed = 0; 
+	y_speed = 0; 
+	
 	hp = 6;
 	
 	invincible = false; 
@@ -29,7 +32,7 @@
 	var rx = sprite_get_width(sprite_index); 
 	var ry = sprite_get_height(sprite_index); 
 
-	if (collision_rectangle(x - (rx/2), y - (ry/2), x + (rx/2), y + (ry/2), obj_enemy_parent, false, true)) {
+	if ((collision_rectangle(x - (rx/2), y - (ry/2), x + (rx/2), y + (ry/2), obj_enemy_parent, false, true)) || (place_meeting(x,y,obj_collider))) {
 		x = irandom_range(60, (room_width - 60)); 
 		y = irandom_range(60, (room_height - 60));
 	}
