@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "44678ea2-2979-4796-967d-78b7b73c2c75",
+            "Value": {
+                "id": "93f1a885-50e1-4f1f-b059-92cae23211f7",
+                "resourcePath": "sprites\\spr_health_pack\\spr_health_pack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "49cee1ce-4c54-4cda-a1d2-04c6c2877d13",
             "Value": {
                 "id": "84d7c703-77d7-435d-9ad4-3585adb489cb",
@@ -227,6 +235,14 @@
             "Value": {
                 "id": "2f1b951e-f110-4c73-bc42-6bc42e775e81",
                 "resourcePath": "objects\\obj_part_sys\\obj_part_sys.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "58194f50-0ee6-45bc-8a79-a8690cb2fd0a",
+            "Value": {
+                "id": "69587dce-e767-4700-b2e1-618593fcc3c9",
+                "resourcePath": "objects\\obj_health_pack\\obj_health_pack.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -490,7 +506,7 @@
             "Key": "d0ea103b-e0ef-43a1-b3e9-a63affad7ae8",
             "Value": {
                 "id": "065c0464-1ae6-4872-b941-7757cddb6921",
-                "resourcePath": "objects\\obj_enemy_spawner\\obj_enemy_spawner.yy",
+                "resourcePath": "objects\\obj_world_spawner_controller\\obj_world_spawner_controller.yy",
                 "resourceType": "GMObject"
             }
         },

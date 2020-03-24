@@ -7,6 +7,7 @@
 	hit_by_enemy_timer_org = hit_by_enemy_timer; 
 	
 	hp = 6; 
+	hp_max = hp; 
 
 	//Movement
 	move_speed = 6; 

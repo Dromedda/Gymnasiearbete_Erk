@@ -65,7 +65,23 @@
 #region Create Enemies
 
 	if (new_wave) {
-		wave += 1; 
+		wave += 1;
+		
+		//Health packs
+		if (obj_player.hp < obj_player.hp_max) {
+			var rr = random(1);  
+			if (rr < healthpack_chance) {
+				instance_create_layer(irandom_range(60, (room_width - 60)), irandom_range(60, (room_height - 60)), "Player", obj_health_pack);
+				
+				var reh = irandom_range(1, 3); 
+				if (obj_player.hp < (obj_player.hp_max/2)) {
+					for (var i = 0; i < reh; i++) {				
+						instance_create_layer(irandom_range(60, (room_width - 60)), irandom_range(60, (room_height - 60)), "Player", obj_health_pack); 			
+					}
+				}
+			}
+		}
+		
 		//Melee
 		for (var i = 0; i < melee_amount; i++) {
 			instance_create_layer(irandom_range(60, (room_width - 60)), irandom_range(60, (room_height - 60)), "Enemy", obj_enemy_melee); 	
