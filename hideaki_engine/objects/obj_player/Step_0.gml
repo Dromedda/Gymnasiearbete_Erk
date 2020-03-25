@@ -304,6 +304,7 @@ switch(state) {
 	}
 	
 	if (hp <= 0) {
+		obj_music_controller.stop_music = true; 
 		room_restart(); //@todo Change Later so that you instead goto a death screen and then back to main menu.	
 	}
 

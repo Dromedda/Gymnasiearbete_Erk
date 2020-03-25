@@ -1,5 +1,6 @@
 #region Take Damage
 
+	if (!invincible) {
 		//Player Melee
 		if (place_meeting(x, y, obj_player_melee)) {
 			hp -= player_melee_dmg; 
@@ -13,6 +14,7 @@
 			instance_destroy(obj_player_bullet);
 			invincible = true;
 		}
+	}
 
 #endregion
 

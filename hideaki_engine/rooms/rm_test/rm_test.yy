@@ -20,7 +20,8 @@
         "1ae5d270-9182-42e2-8fff-413d1bc8d3c1",
         "3aae2c70-2783-4aea-ab35-c0b1a48b30bd",
         "1bc0c22f-3d98-4f69-a49c-956ea7cf99d8",
-        "5d3b0e61-4af8-4c44-8510-cde8b3372b5b"
+        "5d3b0e61-4af8-4c44-8510-cde8b3372b5b",
+        "6a15eb5d-22e2-4301-8e54-aadf0c479735"
     ],
     "IsDnD": false,
     "layers": [
@@ -95,7 +96,8 @@
 {"name": "inst_350B792D","id": "dc7a346c-a005-4610-9b0f-2109ea433d83","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_350B792D","objId": "9531cb0b-c3b7-4c4b-9fc0-cb727a118a79","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 32,"y": 32},
 {"name": "inst_1530FEF1","id": "fa14f9aa-72b4-42dd-8c01-619b8f3e3f01","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_1530FEF1","objId": "ae8d836c-f065-42de-8b58-d4f56ea39c3f","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 288,"y": 64},
 {"name": "inst_7C902BC0","id": "f4467271-efa4-4073-8a79-b8d7ab543de2","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_7C902BC0","objId": "ae8d836c-f065-42de-8b58-d4f56ea39c3f","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 384,"y": 128},
-{"name": "inst_37C02A2D","id": "bc9729af-5205-4840-9112-547399425852","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_37C02A2D","objId": "d0ea103b-e0ef-43a1-b3e9-a63affad7ae8","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 96,"y": 96}
+{"name": "inst_37C02A2D","id": "bc9729af-5205-4840-9112-547399425852","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_37C02A2D","objId": "d0ea103b-e0ef-43a1-b3e9-a63affad7ae8","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 96,"y": 96},
+{"name": "inst_5D47D57D","id": "6a15eb5d-22e2-4301-8e54-aadf0c479735","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_5D47D57D","objId": "782969e7-0c2d-432c-99bc-84a25eb700cf","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 64,"y": 32}
             ],
             "layers": [
 
@@ -157,8 +159,8 @@
             "m_parentID": "00000000-0000-0000-0000-000000000000",
             "m_serialiseFrozen": false,
             "modelName": "GMRTileLayer",
-            "prev_tileheight": 16,
-            "prev_tilewidth": 16,
+            "prev_tileheight": 32,
+            "prev_tilewidth": 32,
             "mvc": "1.0",
             "tiles": {
                 "SerialiseData": null,
