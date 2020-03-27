@@ -371,9 +371,13 @@ switch(state) {
 				instance_create_layer(x, y, "Player", obj_player_ghost_effect); 
 				ghost_frames = ghost_frames_org; 
 			}
-		}
+		} 
 	} else {
 		ghost_frames--; 	
+	}
+	
+	if (state == "melee") {
+		instance_create_layer(x, y, "Player", obj_player_ghost_effect); 	
 	}
 
 #endregion

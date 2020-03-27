@@ -11,3 +11,11 @@
 	image_xscale = obj_player.image_xscale; 
 
 #endregion
+
+#region Limit Amount
+
+	if (!instance_number(self) > 10) {
+		instance_destroy(self);
+	}
+
+#endregion
