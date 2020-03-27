@@ -107,6 +107,11 @@
 #region Fucking die
 
 	if (hp <= 0) {
+		
+		// Add a stamina to player if player kills enemy. 
+		if (obj_player.stamina < obj_player.stamina_org) {
+			obj_player.stamina += 1; 
+		}
 		instance_destroy(self);	
 	}
 

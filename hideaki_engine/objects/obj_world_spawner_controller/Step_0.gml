@@ -67,6 +67,9 @@
 	if (new_wave) {
 		wave += 1;
 		
+		//Set Player Stamina to max every new wave. 
+		obj_player.stamina = obj_player.stamina_org; 
+		
 		//Health packs
 		if (obj_player.hp < obj_player.hp_max) {
 			var rr = random(1);  
