@@ -49,7 +49,13 @@
 		case 9: 
 			melee_amount = 10; 
 			shooter_amount = 8; 
-			break; 			
+			break; 	
+			
+		case 10: 
+			melee_amount = 6; 
+			shooter_amount = 10; 
+			shooter_attack_delay = 40; 
+			break; 
 	}
 	
 #endregion
@@ -87,12 +93,14 @@
 		
 		//Melee
 		for (var i = 0; i < melee_amount; i++) {
-			instance_create_layer(irandom_range(60, (room_width - 60)), irandom_range(60, (room_height - 60)), "Enemy", obj_enemy_melee); 	
+			var melee = instance_create_layer(irandom_range(60, (room_width - 60)), irandom_range(60, (room_height - 60)), "Enemy", obj_enemy_melee); 	
+			if (melee_attack_delay != undefined) { melee.attack_delay = melee_attack_delay; }
 		}
 
 		//shooter
 		for (var i = 0; i < shooter_amount; i++) {
-			instance_create_layer(irandom_range(60, (room_width - 60)), irandom_range(60, (room_height - 60)), "Enemy", obj_enemy_shooter); 	
+			var shooter = instance_create_layer(irandom_range(60, (room_width - 60)), irandom_range(60, (room_height - 60)), "Enemy", obj_enemy_shooter); 	
+			if (shooter_attack_delay != undefined) { shooter.attack_delay = shooter_attack_delay; } 
 		}
 		
 		new_wave = false; 

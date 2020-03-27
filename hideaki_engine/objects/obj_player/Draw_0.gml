@@ -26,6 +26,21 @@
 	
 #endregion
 
+#region Explode When hit
+
+	if ((hit_by_enemy) || (keyboard_check_pressed(vk_f7))) {
+		
+		explode_scale *= .85; 
+		
+		if (explode_scale > 0.05) {
+			draw_sprite_ext(sprite_index, image_index, x, y, explode_scale, explode_scale, 0, c_white, 1); 	
+		}
+	} else if (explode_scale != explode_scale_org) {
+		explode_scale = explode_scale_org;
+	}	
+
+#endregion
+
 #region Stamina Bar
 
 	var s_bar_width = 32; 
@@ -44,8 +59,6 @@
 	
 	draw_set_color(s_bar_fill_colour);
 	draw_rectangle(x - (s_bar_width/2), y + s_bar_y_offset, (x - (s_bar_width/2)) + (s_bar_width * (stamina/stamina_org)), y + (s_bar_y_offset - s_bar_height), false);
-	
-	
 	
 #endregion
 

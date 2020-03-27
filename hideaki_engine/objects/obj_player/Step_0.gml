@@ -283,26 +283,32 @@ switch(state) {
 	}
 	*/
 	
-	if (hit_by_enemy) {
+	if (hit_by_enemy) {		
+		
 		hit_by_enemy_timer--; 
+		
+		invincible = true; 
 		
 		if (hit_by_enemy_timer <= 0) {
 			hit_by_enemy = false; 
 			hit_by_enemy_timer = hit_by_enemy_timer_org;
+			invincible = false; 
 		}
 	} else {
-		if (place_meeting(x, y, obj_enemy_damage_collider)) {
-			var enemy_collider = instance_nearest(x, y, obj_enemy_damage_collider);
+		if (!invincible) {
+			if (place_meeting(x, y, obj_enemy_damage_collider)) {
+				var enemy_collider = instance_nearest(x, y, obj_enemy_damage_collider);
 		
-			hp -= enemy_collider.dmg;
+				hp -= enemy_collider.dmg;
 			
-			instance_destroy(enemy_collider);
+				instance_destroy(enemy_collider); 
 		
-			hit_by_enemy = true; 
+				hit_by_enemy = true; 
 		
+			}
 		}
 	}
-	
+
 	if (hp <= 0) {
 		obj_music_controller.stop_music = true; 
 		room_restart(); //@todo Change Later so that you instead goto a death screen and then back to main menu.	
@@ -354,5 +360,20 @@ switch(state) {
 	
 	#endregion
 
+
+#endregion
+
+#region Ghost Effect
+
+	if (ghost_frames <= 0) {
+		if ((state == "normal") || (state == "dashing")) {
+			if ((x_speed != 0) || (y_speed != 0)) {
+				instance_create_layer(x, y, "Player", obj_player_ghost_effect); 
+				ghost_frames = ghost_frames_org; 
+			}
+		}
+	} else {
+		ghost_frames--; 	
+	}
 
 #endregion

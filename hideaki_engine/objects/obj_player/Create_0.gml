@@ -2,8 +2,11 @@
 
 	//Stats States
 	invincible = false; 
+	invincible_timer = 30; 
+	invincible_timer_org = invincible_timer; 
+	
 	hit_by_enemy = false; 
-	hit_by_enemy_timer = 15; 
+	hit_by_enemy_timer = 45; 
 	hit_by_enemy_timer_org = hit_by_enemy_timer; 
 	
 	hp = 6; 
@@ -60,6 +63,12 @@
 	
 	flicker_freq = 8; 
 	flicker_timer = flicker_freq;
+	
+	ghost_frames = 4; 
+	ghost_frames_org = ghost_frames; 
+	
+	explode_scale = 2; 
+	explode_scale_org = explode_scale; 
 	
 	anim_state = "static"; 
 	

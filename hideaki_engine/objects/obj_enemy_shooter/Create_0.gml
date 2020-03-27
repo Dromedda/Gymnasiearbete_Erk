@@ -18,7 +18,7 @@
 	
 	move_speed = 3;
 	
-	attack_delay = 70; 
+	attack_delay = 90; 
 	attack_delay_org = attack_delay; 
 	attack_detect_radius = 400; 
 	attacking = false; 
