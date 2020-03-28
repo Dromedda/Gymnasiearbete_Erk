@@ -1,7 +1,7 @@
 #region Variables
 
 	wave = -1; 
-	wave_max = 10; 
+	//wave_max = 10; 
 	
 	new_wave = false; 
 	

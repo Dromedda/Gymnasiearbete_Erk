@@ -4,9 +4,6 @@
 
 	cam_w = 1024; 
 	cam_h = 576;
-	
-	cx = x; 
-	cy = y;
 
 	var vm = matrix_build_lookat (x, y, -10, x, y, 0, 0, 1, 0);
 
