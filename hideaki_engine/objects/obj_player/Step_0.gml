@@ -327,14 +327,34 @@ switch(state) {
 	#endregion
 	
 	#region Decide Animation
-	
-		if ((x_speed != 0) || (y_speed != 0)) {
+		
+		if ((state == "melee")) {
+			anim_state = "melee"; 
+		} else if ((x_speed != 0) || (y_speed != 0)) {
 			anim_state = "run"; 	
 		} else if ((x_speed == 0) && (y_speed == 0)) {
 			anim_state = "idle"; 	
 		} else {
 			anim_state = "static"; 	
 		}
+		
+		if (anim_state != "melee") {
+			image_speed = 1; 
+			
+			image_yscale = 1; 
+			
+		} else {
+			var xs = 0;
+			if (image_xscale == -1) {
+				
+				xs = -1; 	
+			} else if (image_xscale == 1) {
+				xs = 1; 	
+			}
+			
+			image_xscale = 2 * xs; 			
+			image_yscale = 2;		
+		}	
 	
 	#endregion
 	
@@ -351,6 +371,21 @@ switch(state) {
 			
 			case "run": 
 				sprite_index = spr_player_run;
+				break; 
+				
+			case "melee":
+				sprite_index = spr_player_attack; 
+				
+				if (melee_dur == 1) {
+					image_index += 1; 	
+				}
+				
+				if (melee_dur >= 2) {
+					image_speed = 1; 	
+				} else {
+					image_speed = 0; 	
+				}
+				
 				break; 
 			
 			default: 

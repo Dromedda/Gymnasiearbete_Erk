@@ -24,3 +24,9 @@
 	}
 
 #endregion
+
+#region draw Colliders
+
+	visible = obj_collider_controller.draw_colliders; 	
+
+#endregion
