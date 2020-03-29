@@ -66,7 +66,7 @@
 #region Move Towards Player
 
 	if (!invincible) {
-		if (collision_circle(x, y, player_detection_radius, obj_player, false, true)) {
+		if ((collision_circle(x, y, player_detection_radius, obj_player, false, true)) && (!collision_circle(x, y, sprite_get_height(sprite_index), obj_player, false, true))) {
 			var px = obj_player.x; 
 			var py = obj_player.y; 
 		
