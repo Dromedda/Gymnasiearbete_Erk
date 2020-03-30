@@ -111,14 +111,16 @@ switch(state) {
 			}
 			*/
 			
-			if ((key_c) && (stamina >= 1)) {
-				stamina--; 
+			if ((!collision_circle(x, y, 64, obj_textbox_parent, false, true)) && (!instance_exists(obj_textbox))) {
+				if ((key_c) && (stamina >= 1)) {
+					stamina--; 
 				
-				melee_dir_x = move_dir_x; 
-				melee_dir_y = move_dir_y;
+					melee_dir_x = move_dir_x; 
+					melee_dir_y = move_dir_y;
 				
-				instance_create_layer(x + (melee_offset * facing_dir_x), y + (melee_offset * facing_dir_y), "Player", obj_player_melee);
-				state = "melee"; 	
+					instance_create_layer(x + (melee_offset * facing_dir_x), y + (melee_offset * facing_dir_y), "Player", obj_player_melee);
+					state = "melee"; 	
+				}
 			}
 			
 			show_debug_message("Melee_dir_x = " + string(melee_dir_x));

@@ -1,6 +1,6 @@
 #region INPUT PROGRESS KEY
 
-	var key_progress = (keyboard_check_pressed(ord("E"))); 
+	var key_progress = obj_input.kb_c; 
 
 #endregion
 
@@ -24,7 +24,7 @@
 
 	if (char_count < string_length(text_to_draw[page])) {
 		if (char_count % 2 == 0) {
-			audio_play_sound(snd_textbox_voice_standard, 1, false); 
+			audio_play_sound(voice, 1, false); 
 		}
 		char_count += (writing_speed/10); 	
 	}

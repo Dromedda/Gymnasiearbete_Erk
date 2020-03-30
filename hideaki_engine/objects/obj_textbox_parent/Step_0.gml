@@ -1,12 +1,12 @@
 #region Interaction Key Variable
 
-	var key_interact = (keyboard_check_pressed(ord("E"))); 
+	var key_interact = obj_input.kb_c;
 
 #endregion
 
  #region Trigger TextBox	
 	
-	if (place_meeting(x, y, obj_player)) {
+	if (collision_circle(x, y, 64, obj_player, false, true)) {
 			can_interact = true;  
 			if (my_text_box == noone) && (key_interact) {
 				my_text_box = instance_create_layer(0, 0, "TextBoxLayer", obj_textbox); 

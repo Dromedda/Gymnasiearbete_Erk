@@ -27,11 +27,11 @@
 
 #region Draw Health
 
-	var heart_scale = 2; 
+	var heart_scale = 1.6; 
 	var heart_rot = 0; 
 	var heart_x_base = (24 * heart_scale);
 	var heart_y_base = (24 * heart_scale);
-	var heart_x_pos_mult = (12 * heart_scale); 	
+	var heart_x_pos_mult = (16 * heart_scale); 	
 
 	for (var i = 0; i < hp; i++) {
 		draw_sprite_ext(spr_player_heart, -1, heart_x_base + (heart_x_pos_mult * i), heart_y_base, heart_scale, heart_scale, heart_rot, c_white, 1);	

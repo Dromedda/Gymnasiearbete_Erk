@@ -1,0 +1,1 @@
+voice = snd_textbox_voice_female_2; 
