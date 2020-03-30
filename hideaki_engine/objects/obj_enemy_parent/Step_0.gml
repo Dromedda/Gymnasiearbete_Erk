@@ -38,7 +38,16 @@
 			attacking = true; 	
 		}
 		
-	} 
+		if (attack_delay < (attack_delay_org/3)) {
+			draw_telegraph = true; 	
+		} else {
+			draw_telegraph = false; 	
+		}
+		
+	} else {
+		draw_telegraph = false; 
+		attack_delay = attack_delay_org;	
+	}
 
 #endregion
 

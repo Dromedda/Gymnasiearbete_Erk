@@ -8,6 +8,8 @@
 	
 	hp = 6;
 	
+	draw_telegraph = false; 
+	
 	invincible = false; 
 	invincible_timer = 30;
 	invincible_timer_org = invincible_timer;
@@ -19,7 +21,7 @@
 	
 	move_speed = 4;
 	
-	attack_delay = 40; 
+	attack_delay = 36; 
 	attack_delay_org = attack_delay; 
 	attack_detect_radius = (sprite_get_height(spr_enemy_damage_collider) + 32); 
 	attacking = false; 
