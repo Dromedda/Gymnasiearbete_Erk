@@ -12,6 +12,21 @@
 	
 #endregion
 
+#region Explode When hit
+
+	if ((hit_by_player) || (keyboard_check_pressed(vk_f7))) {
+		
+		explode_scale *= .90; 
+		
+		if (explode_scale > 0.1) {
+			draw_sprite_ext(sprite_index, image_index, x, y, explode_scale, explode_scale, 0, c_white, 1); 	
+		}
+	} else if (explode_scale != explode_scale_org) {
+		explode_scale = explode_scale_org;
+	}	
+
+#endregion
+
 #region Draw telegraph
 
 	if (draw_telegraph) {

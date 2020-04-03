@@ -27,18 +27,21 @@
 	dashing_duration = 8; 
 	dashing_duration_org = dashing_duration; 
 	
+	dashing_x_dir = 0; 
+	dashing_y_dir = 0; 
+	
 	dashing_cooldown = 30; 
 	dashing_cooldown_org = dashing_cooldown; 
 	
 	//shooting
-	ammunition = 2; 
+	ammunition = 4; 
 	ammunition_max = ammunition;
 	reloading = false; 
 	reload_time = 90; 
 	reload_time_org = reload_time;
 	
 	//@Todo Might want to imploment later
-	shooting_cooldown = 16; 
+	shooting_cooldown = 8; 
 	shooting_cooldown_org = shooting_cooldown;
 
 	//Melee 

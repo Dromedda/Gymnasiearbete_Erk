@@ -5,6 +5,7 @@
 		if (place_meeting(x, y, obj_player_melee)) {
 			hp -= player_melee_dmg; 
 			invincible = true; 
+			hit_by_player = true; 
 		}
 	
 		//Player Shooting
@@ -13,6 +14,7 @@
 			part_particles_create(global.ps, x, y, global.pt_shoot, 16);
 			instance_destroy(obj_player_bullet);
 			invincible = true;
+			hit_by_player = true; 
 		}
 	}
 
@@ -24,6 +26,7 @@
 		invincible_timer--; 	
 	} else if (invincible_timer <= 0) {
 		invincible = false; 
+		hit_by_player = false; 
 		invincible_timer = invincible_timer_org; 
 	}
 

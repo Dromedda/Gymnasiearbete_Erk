@@ -11,6 +11,9 @@
 	
 	var key_aim = obj_input.kb_aim; 
 	
+	var move_dir_x = key_right - key_left; 
+	var move_dir_y = key_down - key_up; 
+	
 #endregion
 
 #region Delta Time
@@ -43,9 +46,6 @@ switch(state) {
 	case "normal": 
 	
 		#region Movement
-
-			var move_dir_x = key_right - key_left; 
-			var move_dir_y = key_down - key_up; 
 	
 			var move_diag = (move_dir_x != 0) && (move_dir_y != 0); 
 
@@ -83,6 +83,8 @@ switch(state) {
 		
 			if ((key_b) && (dashing_cooldown == 0) && ((x_speed != 0) || (y_speed != 0))) {
 				part_particles_create(global.ps, x, y, global.pt_player_dash, 16);
+				dashing_x_dir = move_dir_x; 
+				dashing_y_dir = move_dir_y; 
 				state = "dashing"; 	
 			}
 			
@@ -332,6 +334,8 @@ switch(state) {
 		
 		if ((state == "melee")) {
 			anim_state = "melee"; 
+		} else if (state == "dashing") {
+			anim_state = "dashing"; 	
 		} else if ((x_speed != 0) || (y_speed != 0)) {
 			anim_state = "run"; 	
 		} else if ((x_speed == 0) && (y_speed == 0)) {
@@ -388,6 +392,10 @@ switch(state) {
 					image_speed = 0; 	
 				}
 				
+				break; 
+				
+			case "dashing": 
+				sprite_index = spr_player_dash; 
 				break; 
 			
 			default: 

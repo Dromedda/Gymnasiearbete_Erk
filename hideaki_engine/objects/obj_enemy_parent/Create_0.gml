@@ -1,5 +1,8 @@
 #region variables 
 
+	explode_scale = 2; 
+	explode_scale_org = explode_scale; 
+
 	player_melee_dmg = 2; 
 	player_shoot_dmg = 3; 
 	
@@ -7,6 +10,8 @@
 	y_speed = 0; 
 	
 	hp = 6;
+	
+	hit_by_player = false; 
 	
 	draw_telegraph = false; 
 	

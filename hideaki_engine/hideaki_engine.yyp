@@ -743,6 +743,14 @@
             }
         },
         {
+            "Key": "e8b54afe-5858-44fa-9bb5-da0b2faf053b",
+            "Value": {
+                "id": "945c2ca6-7c56-485b-8ba6-8b6239c90b23",
+                "resourcePath": "sprites\\spr_player_dash\\spr_player_dash.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e998d60a-0778-403c-8070-e1948423d276",
             "Value": {
                 "id": "bdb797e0-417d-4093-8d1d-add840456efb",
