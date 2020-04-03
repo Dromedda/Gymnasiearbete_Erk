@@ -254,6 +254,12 @@ switch(state) {
 
 #endregion
 
+#region Rotate if player is dashing
+
+
+
+#endregion
+
 
 #region collisions 
 
