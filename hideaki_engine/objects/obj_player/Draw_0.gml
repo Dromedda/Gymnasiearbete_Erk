@@ -62,3 +62,13 @@
 	
 #endregion
 
+#region Cursor
+
+	//Check if player is aiming. 
+	if (state == "shooting") {
+		var cursor_x = x + lengthdir_x(cursor_offset, cursor_dir); 
+		var cursor_y = y + lengthdir_y(cursor_offset, cursor_dir); 
+		draw_sprite(spr_player_aim_cursor, -1, cursor_x, cursor_y);	
+	}
+
+#endregion

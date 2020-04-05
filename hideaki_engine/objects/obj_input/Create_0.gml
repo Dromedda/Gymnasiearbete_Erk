@@ -15,4 +15,11 @@
 	
 	kb_aim = 0; 
 	
+	lstick_dir = 0; 
+	
+	// Input Devices
+	key_input = 0;
+	gp_input = 0;
+	input_device = noone; 
+	
 #endregion

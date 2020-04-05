@@ -1,6 +1,6 @@
 #region Variables
 
-	bullet_speed = 16; 
+	bullet_speed = 4; 
 	
 	x_speed = 0; 
 	y_speed = 0; 
@@ -11,11 +11,6 @@
 
 #region Get Direction
 	
-	dir_x = obj_player.face_dir_x;
-	dir_y = obj_player.face_dir_y;
-	
-	if ((dir_x != 0) && (dir_y != 0)) {
-		bullet_speed = bullet_speed * 0.707; 	
-	}
+	dir = obj_player.cursor_dir; 	
 
 #endregion

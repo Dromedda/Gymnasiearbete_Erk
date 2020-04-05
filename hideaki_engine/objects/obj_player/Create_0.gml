@@ -75,4 +75,8 @@
 	
 	anim_state = "static"; 
 	
+	//Aim
+	cursor_offset = 64;
+	cursor_dir = 0; 
+	
 #endregion

@@ -180,6 +180,19 @@ switch(state) {
 	break; 
 	
 	case "shooting": 
+	/*
+		//Get Direction
+		if (obj_input.input_device == "keyboard") {
+			cursor_dir = point_direction(x, y, mouse_x, mouse_y); 
+		} else if (obj_input.input_device == "gamepad") {
+			cursor_dir = obj_input.lstick_dir;
+		}
+	*/
+		if (!obj_input.lstick_dir == 0) {
+			cursor_dir = obj_input.lstick_dir; 	
+		} else {
+			cursor_dir = point_direction(x, y, mouse_x, mouse_y);	
+		}
 	
 		face_dir_x = key_right - key_left;
 		face_dir_y = key_down - key_up;
@@ -201,15 +214,13 @@ switch(state) {
 		}
 		
 		if ((ammunition >= 1) && (key_c) && (!reloading)) {
-			if ((face_dir_x != 0) || (face_dir_y != 0)) {
-				if (shooting_cooldown <= 0) {
-					if (ammunition >= 2) {
-						shooting_cooldown = shooting_cooldown_org;
-					}
-					ammunition--; 
-					instance_create_layer(x, y, "Player", obj_player_bullet);
-				} 
-			}
+			if (shooting_cooldown <= 0) {
+				if (ammunition >= 2) {
+					shooting_cooldown = shooting_cooldown_org;
+				}
+				ammunition--; 
+				instance_create_layer(x, y, "Player", obj_player_bullet);
+			} 
 		} else if (ammunition < 1) {
 			reloading = true; 
 		}

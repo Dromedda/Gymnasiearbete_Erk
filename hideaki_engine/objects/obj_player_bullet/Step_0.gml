@@ -1,13 +1,7 @@
-#region Delta Time 
-
-	var delta_t = (delta_time/10000); 	
-
-#endregion
-
 #region Move
 	
-	x_speed = (bullet_speed * (sign(dir_x))) * delta_t;
-	y_speed = (bullet_speed * (sign(dir_y))) * delta_t;
+	x_speed += lengthdir_x(bullet_speed, dir);
+	y_speed += lengthdir_y(bullet_speed, dir);
 
 	//check collisions and then apply x_speed to x_coordinate
 	if (!place_meeting(x + x_speed, y, obj_collider)) {
