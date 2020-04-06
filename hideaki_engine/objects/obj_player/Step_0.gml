@@ -134,7 +134,7 @@ switch(state) {
 		#region Shooting 
 		
 			if (key_aim) {
-				if (state != "shooting") {
+				if ((state != "shooting") && (obj_input.input_device == "gamepad")) {
 					window_mouse_set(x, y);	
 				}
 				state = "shooting"; 				
@@ -184,10 +184,10 @@ switch(state) {
 	
 	case "shooting": 
 
-		if (!obj_input.lstick_dir == 0) {
-			cursor_dir = obj_input.lstick_dir; 	
-		} else {
+		if (obj_input.input_device == "keyboard") {
 			cursor_dir = point_direction(x, y, mouse_x, mouse_y);	
+		} else {
+			cursor_dir = obj_input.lstick_dir;	
 		}
 	
 		face_dir_x = key_right - key_left;
@@ -329,6 +329,7 @@ switch(state) {
 	if (hp <= 0) {
 		obj_music_controller.stop_music = true; 
 		room_goto_previous(); //@todo Change Later so that you instead goto a death screen and then back to main menu.	
+		state = "shooting";
 	}
 
 #endregion

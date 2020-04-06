@@ -66,9 +66,19 @@
 
 	//Check if player is aiming. 
 	if (state == "shooting") {
-		var cursor_x = x + lengthdir_x(cursor_offset, cursor_dir); 
-		var cursor_y = y + lengthdir_y(cursor_offset, cursor_dir); 
+		var cursor_x = 0; 
+		var cursor_y = 0; 
+		
+		if (obj_input.input_device == "gamepad") {
+			cursor_x = x + lengthdir_x(cursor_offset, cursor_dir); 
+			cursor_y = y + lengthdir_y(cursor_offset, cursor_dir); 
+		} else if (obj_input.input_device == "keyboard") {
+			cursor_x = mouse_x;
+			cursor_y = mouse_y;
+		}
 		draw_sprite(spr_player_aim_cursor, -1, cursor_x, cursor_y);	
+	} else if (obj_input.input_device == "keyboard") {
+		draw_sprite(spr_player_aim_cursor, -1, mouse_x, mouse_y);		
 	}
 
 #endregion
