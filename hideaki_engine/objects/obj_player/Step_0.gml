@@ -134,7 +134,10 @@ switch(state) {
 		#region Shooting 
 		
 			if (key_aim) {
-				state = "shooting"; 	
+				if (state != "shooting") {
+					window_mouse_set(x, y);	
+				}
+				state = "shooting"; 				
 			}
 		
 		#endregion
@@ -180,14 +183,7 @@ switch(state) {
 	break; 
 	
 	case "shooting": 
-	/*
-		//Get Direction
-		if (obj_input.input_device == "keyboard") {
-			cursor_dir = point_direction(x, y, mouse_x, mouse_y); 
-		} else if (obj_input.input_device == "gamepad") {
-			cursor_dir = obj_input.lstick_dir;
-		}
-	*/
+
 		if (!obj_input.lstick_dir == 0) {
 			cursor_dir = obj_input.lstick_dir; 	
 		} else {

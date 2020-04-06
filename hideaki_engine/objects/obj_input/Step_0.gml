@@ -42,7 +42,7 @@
 	kb_a =			(keyboard_check_pressed(ord("R")) || 
 					(gamepad_button_check_pressed(gp_1, gp_face2))); 
 
-	kb_b =			(keyboard_check_pressed(vk_lshift) || 
+	kb_b =			(keyboard_check_pressed(vk_space) || 
 					(gamepad_button_check_pressed(gp_1, gp_face3))); 
 
 	kb_c =			((gamepad_button_check_pressed(gp_1, gp_shoulderrb)) ||
