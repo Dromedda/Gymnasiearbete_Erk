@@ -7,6 +7,8 @@
 	
 	move_speed = 8; 
 	
+	particle_delay = 1; 
+	
 	part_particles_create(global.ps, x, y, global.pt_shoot, 128);
 
 #endregion

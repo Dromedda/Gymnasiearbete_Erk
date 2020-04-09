@@ -287,7 +287,7 @@ switch(state) {
 
 #region Fucking Die
 
-	/*
+	/* 
 	if (!hit_by_enemy) {
 		if (place_meeting(x, y, obj_enemy_damage_collider)) {
 			var enemy_collider = instance_nearest(x, y, obj_enemy_damage_collider);

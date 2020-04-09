@@ -25,6 +25,21 @@
 
 #endregion
 
+#region Particles
+
+	if (particle_delay != noone) {
+		if (!particle_delay <= 0) {
+			particle_delay--; 
+		} else {
+			part_particles_create(global.ps, x, y, global.pt_shoot, 12);	
+			particle_delay = noone; 
+		}
+	}
+	
+	part_particles_create(global.ps, x, y, global.pt_shoot, 4);
+	
+#endregion
+
 #region draw Colliders
 
 	visible = obj_collider_controller.draw_colliders; 	
