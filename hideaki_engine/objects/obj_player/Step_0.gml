@@ -115,7 +115,6 @@ switch(state) {
 			
 			if ((!collision_circle(x, y, 64, obj_textbox_parent, false, true)) && (!instance_exists(obj_textbox))) {
 				if ((key_c) && (stamina >= 1)) {
-					stamina--; 
 				
 					melee_dir_x = move_dir_x; 
 					melee_dir_y = move_dir_y;

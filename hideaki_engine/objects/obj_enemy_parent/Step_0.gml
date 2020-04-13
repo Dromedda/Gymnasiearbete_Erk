@@ -3,6 +3,7 @@
 	if (!invincible) {
 		//Player Melee
 		if (place_meeting(x, y, obj_player_melee)) {
+			obj_player.stamina--; 
 			hp -= player_melee_dmg; 
 			invincible = true; 
 			hit_by_player = true; 

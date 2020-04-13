@@ -13,9 +13,16 @@
 	hp_max = hp; 
 
 	//Movement
-	move_speed = 6; 
+	move_speed = 5; 
 	move_speed_org = move_speed;
 	move_speed_diag = move_speed * 0.707; 
+	
+	//Movement In Intro
+	if (room == rm_Intro) {
+		move_speed = 3.6; 
+		move_speed_org = move_speed;
+		move_speed_diag = move_speed * 0.707; 
+	}
 	
 	x_speed = 0; 
 	y_speed = 0; 
