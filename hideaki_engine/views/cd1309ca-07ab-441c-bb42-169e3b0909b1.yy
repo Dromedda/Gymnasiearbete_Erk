@@ -7,7 +7,8 @@
         "2f96ce31-3852-43ff-9154-67795fc46cc3",
         "227565ef-616d-4aca-b7d9-384d3821f642",
         "53a8fd93-abcd-42a4-b5f5-a2592609c800",
-        "1ef03cba-b843-484c-aba8-2ecedcc0cf01"
+        "1ef03cba-b843-484c-aba8-2ecedcc0cf01",
+        "bcdff580-cfe8-4ff1-8b27-7bc29cab664e"
     ],
     "filterType": "GMObject",
     "folderName": "Player",

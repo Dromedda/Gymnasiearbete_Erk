@@ -34,7 +34,7 @@
 	dashing_cooldown_org = dashing_cooldown; 
 	
 	//shooting
-	ammunition = 4; 
+	ammunition = 12; 
 	ammunition_max = ammunition;
 	reloading = false; 
 	reload_time = 90; 

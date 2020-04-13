@@ -63,7 +63,7 @@
 		
 		attack_dir = point_direction(x, y, px, py);
 		
-		instance_create_layer(x + lengthdir_x(attack_distance, attack_dir), y + lengthdir_y(attack_distance, attack_dir), "Enemy", obj_enemy_damage_collider);
+		instance_create_layer(x + lengthdir_x(attack_distance, attack_dir), y + lengthdir_y(attack_distance, attack_dir), "Enemy", damage_collider);
 		
 		show_debug_message("Lengthdir_x E Attack = " + string(lengthdir_x(attack_distance, attack_dir)));
 		show_debug_message("Lengthdir_y E Attack = " + string(lengthdir_y(attack_distance, attack_dir)));

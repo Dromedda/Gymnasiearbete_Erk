@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "25357122-2445-494d-85a3-45f9c10c2bd1",
+            "Value": {
+                "id": "416b73f7-e8b1-4494-a96b-736af69ba646",
+                "resourcePath": "objects\\obj_enemy_bigboy_damage_collider\\obj_enemy_bigboy_damage_collider.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2d5e8bb1-1c7c-4ec7-8be8-2a0398be0aa1",
             "Value": {
                 "id": "7e586caf-884f-4b33-a0a9-43298e83f005",
@@ -244,6 +252,14 @@
                 "id": "223e6b26-24e3-4e0d-aa60-48a496776aef",
                 "resourcePath": "rooms\\rm_Intro\\rm_Intro.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "48cf4b86-d4bd-4d68-b744-20f60a5282bf",
+            "Value": {
+                "id": "99429f82-e041-4e94-a6a9-8dd3a4faec29",
+                "resourcePath": "views\\48cf4b86-d4bd-4d68-b744-20f60a5282bf.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -396,6 +412,14 @@
                 "id": "1e51eba7-a847-46c3-afed-c302ea374b7b",
                 "resourcePath": "objects\\obj_music_controller\\obj_music_controller.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7a0d8097-64e2-4da8-a5ae-2225134a4bb9",
+            "Value": {
+                "id": "ae4938b6-b43c-40d4-a966-be9e326a35a9",
+                "resourcePath": "sprites\\spr_enemy_bigboy_static\\spr_enemy_bigboy_static.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -583,6 +607,14 @@
             }
         },
         {
+            "Key": "b0276ee0-595d-41e5-8087-2f0f25789c07",
+            "Value": {
+                "id": "e25bc836-a0f7-4166-aa74-2e117bbe9b12",
+                "resourcePath": "objects\\obj_player_reload_bar\\obj_player_reload_bar.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b1e16db2-7889-42f2-aba2-9ccf20f4aca0",
             "Value": {
                 "id": "8d08ad8c-63c1-4c2c-8980-ae57cb5bcebc",
@@ -631,6 +663,14 @@
             }
         },
         {
+            "Key": "bcdff580-cfe8-4ff1-8b27-7bc29cab664e",
+            "Value": {
+                "id": "4e73d12b-3579-448f-b42f-d1ed5d21e908",
+                "resourcePath": "views\\bcdff580-cfe8-4ff1-8b27-7bc29cab664e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "beb1120e-6bda-490f-a451-77060ee177ab",
             "Value": {
                 "id": "c537e81e-c13f-4ef4-b815-46f16fead743",
@@ -668,6 +708,14 @@
                 "id": "ac33382d-f27e-4baf-935a-2d52b81027c5",
                 "resourcePath": "views\\cd1309ca-07ab-441c-bb42-169e3b0909b1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "cd4b07be-e423-4ea2-808b-f5381db8147e",
+            "Value": {
+                "id": "e4d48009-7c58-4702-b332-a09fd1cc8d6c",
+                "resourcePath": "sprites\\spr_enemy_bigboy_damage_collider\\spr_enemy_bigboy_damage_collider.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -835,6 +883,22 @@
             "Value": {
                 "id": "a72cbeea-4829-42c9-bb65-be1d690f44f3",
                 "resourcePath": "objects\\obj_door\\obj_door.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fb274f66-9cac-49ff-b538-50b2843d8971",
+            "Value": {
+                "id": "26e2987d-6328-41da-9523-de47ad5eddf1",
+                "resourcePath": "sprites\\spr_ui_reloading\\spr_ui_reloading.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fe6b8c82-6d3a-42d3-862a-65e5b80b8062",
+            "Value": {
+                "id": "02ef4c08-eb55-478e-ab58-3a4483d1a7b6",
+                "resourcePath": "objects\\obj_enemy_bigboy\\obj_enemy_bigboy.yy",
                 "resourceType": "GMObject"
             }
         },

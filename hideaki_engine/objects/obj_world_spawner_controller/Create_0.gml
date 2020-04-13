@@ -8,6 +8,7 @@
 	//Enemy Types
 	melee_amount = 0; 
 	shooter_amount = 0;
+	bigboy_amount = 0; 
 	
 	healthpack_chance = 0.50; 
 	
@@ -17,5 +18,6 @@
 	*/
 	melee_attack_delay = undefined; 
 	shooter_attack_delay = undefined; 
+	bigboy_attack_delay = undefined;
 
 #endregion

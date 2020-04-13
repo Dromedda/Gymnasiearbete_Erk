@@ -6,9 +6,11 @@
 
 #region Reloading 
 	
-	if (reloading) {
-		draw_text(x - 32, y - 48, "RELOADING");
-	}
+	if (reloading) { 
+		instance_create_layer(x, y - 54, "Player", obj_player_reload_bar);
+	} else if (instance_exists(obj_player_reload_bar)) {
+		instance_destroy(obj_player_reload_bar);
+	}	
 	
 #endregion
 

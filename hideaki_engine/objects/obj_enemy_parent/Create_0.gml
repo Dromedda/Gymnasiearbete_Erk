@@ -9,6 +9,8 @@
 	x_speed = 0; 
 	y_speed = 0; 
 	
+	damage_collider = obj_enemy_damage_collider; 
+	
 	hp = 6;
 	
 	hit_by_player = false; 
