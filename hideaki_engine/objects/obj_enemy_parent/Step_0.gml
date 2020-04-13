@@ -15,6 +15,9 @@
 			part_particles_create(global.ps, x, y, global.pt_shoot, 16);
 			instance_destroy(obj_player_bullet);
 			invincible = true;
+			
+			//Reduce Time For Invincibillity if hit by bullet. [Gamedesign Im Sorry :( ]
+			invincible_timer = invincible_timer * 0.3; 
 			hit_by_player = true; 
 		}
 	}
